@@ -1,0 +1,1 @@
+cmd_/home/user/Dropbox/3753/PA2/module/simple_char_driver.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/user/Dropbox/3753/PA2/module/simple_char_driver.ko /home/user/Dropbox/3753/PA2/module/simple_char_driver.o /home/user/Dropbox/3753/PA2/module/simple_char_driver.mod.o

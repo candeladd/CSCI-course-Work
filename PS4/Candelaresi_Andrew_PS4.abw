@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="1822" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.0" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="0.99.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Tue Nov 17 15:43:55 2015
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">user</m>
+<m key="dc.date">Sat Nov 14 14:30:50 2015
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="14" edit-time="85953" last-saved="1447800235" uid="c46def92-8b10-11e5-9b7c-914ecc361260">
+<version id="3" started="1447536650" uid="cc3a1c28-8b1a-11e5-9b7c-914ecc361260" auto="0" top-xid="20"/>
+<version id="5" started="1447718721" uid="19e77492-8ce3-11e5-9ed2-c2bf75ce2646" auto="0" top-xid="626"/>
+<version id="14" started="1447735455" uid="af177fc8-8d7c-11e5-99c4-88db70e140fb" auto="0" top-xid="627"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-right:0pt; text-decoration:none; bgcolor:transparent; line-height:1.0; font-size:12pt; margin-bottom:0pt; font-variant:normal; font-weight:normal; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="8.267717" height="11.692913" units="in" page-scale="1.000000"/>
+<section xid="5" props="page-margin-footer:0.5in; page-margin-header:0.5in">
+<p style="Normal" xid="6">Andrew Candelaresi<c></c></p>
+<p style="Normal" xid="1"><c></c><c></c></p>
+<p style="Normal" xid="2">OS Problem Set<c></c></p>
+<p style="Normal" xid="3"><c></c><c></c></p>
+<p style="Normal" xid="4" props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal">1. <c></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"> </c></p>
+<p style="Normal" xid="13" props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">compaction:</c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="12" props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">The </c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">goal is to shufﬂe the memory contents so as to place all free memory together</c></p>
+<p style="Normal" xid="10" props="font-family:Liberation Serif; dom-dir:ltr; font-style:normal; margin-left:0.0000in; lang:en-US; text-decoration:none; text-indent:0.0000in; text-position:normal; margin-top:0.0000in; font-weight:normal; margin-right:0.0000in; margin-bottom:0.0000in; font-size:12pt; line-height:1.000000; text-align:left"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">in one large block. Compaction is not always possible, however. If relocation</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="11" props="font-family:Liberation Serif; dom-dir:ltr; font-style:normal; margin-left:0.0000in; lang:en-US; text-decoration:none; text-indent:0.0000in; text-position:normal; margin-top:0.0000in; font-weight:normal; margin-right:0.0000in; margin-bottom:0.0000in; font-size:12pt; line-height:1.000000; text-align:left"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">is static and is done at assembly or load time, compaction cannot be done.</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c> </p>
+<p style="Normal" xid="7"><c></c><c></c></p>
+<p style="Normal" xid="8">Segmentation:<c></c></p>
+<p style="Normal" xid="15">divide a process into variably sized segments that are organized according to some logical criteria.  A process has code, data, stack, and heap.  Each of these could be a separate segment.  A process could subdivide its cod into functional segments, e.g. a web server could divide its functional components into a networking segment.  Need a segmentation table to keep track of where each segment is mapped in main memory.  Segments are variable in size; each entry of the segment table needs a base and a limit field to place in the base and limit registers.<c></c></p>
+<p style="Normal" xid="16"><c></c><c></c></p>
+<p style="Normal" xid="14"><c></c>Paging: </p>
+<p style="Normal" xid="18" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">Segmentation permits the physical address space of a process to be noncontiguous. Paging is another memory-management scheme that offers this advantage. However, paging avoids external fragmentation and the need for </c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">compaction, whereas segmentation does not. It also solves the considerable </c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">problem of ﬁtting memory chunks of varying sizes onto the backing store.</c></p>
+<p style="Normal" xid="21" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c></c></p>
+<p style="Normal" xid="22" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">2.</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="23" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">a. 2200</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="24" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">b.1000</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="25" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">c. 2200</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="26" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">d. 2200</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="27" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">e. 2200</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="28" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">f. 2200</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="29" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c></c></p>
+<p style="Normal" xid="30" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">3. P1 = 7 pages, P2 = 4 pages</c></p>
+<p style="Normal" xid="633" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">Page Table P1</c></p>
+<p style="Normal" xid="1489" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<table xid="1490" props="table-column-props:1.000000in/1.000000in/">
+<cell xid="1491" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="1492" props="font-family:Liberation Serif">page #:</p>
+</cell>
+<cell xid="1494" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="1495" props="font-family:Liberation Serif">frame #:</p>
+</cell>
+<cell xid="1497" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="1498" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1500" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="1501" props="font-family:Liberation Serif">6 </p>
+</cell>
+<cell xid="1503" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="1504" props="font-family:Liberation Serif">1</p>
+</cell>
+<cell xid="1506" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="1507" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1509" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="1510" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1512" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="1513" props="font-family:Liberation Serif">11</p>
+</cell>
+<cell xid="1515" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="1516" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1518" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="1519" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1521" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="1522" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1524" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="1525" props="font-family:Liberation Serif">13</p>
+</cell>
+<cell xid="1527" props="bot-attach:7; left-attach:0; right-attach:1; top-attach:6">
+<p style="Normal" xid="1528" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1530" props="bot-attach:7; left-attach:1; right-attach:2; top-attach:6">
+<p style="Normal" xid="1531" props="font-family:Liberation Serif">15</p>
+</cell>
+<cell xid="1533" props="bot-attach:8; left-attach:0; right-attach:1; top-attach:7">
+<p style="Normal" xid="1534" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1536" props="bot-attach:8; left-attach:1; right-attach:2; top-attach:7">
+<p style="Normal" xid="1537" props="font-family:Liberation Serif">9</p>
+</cell>
+</table>
+<p style="Normal" xid="787" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1553" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1554" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1555" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1556" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1557" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1558" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c>Page Table P2</p>
+<table xid="755" props="table-column-props:1.000000in/1.000000in/; table-row-heights:0.1875in/0.1875in/0.1875in/0.2500in/0.2500in/; list-tag:1">
+<cell xid="756" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="757" props="font-family:Liberation Serif">page #:</p>
+</cell>
+<cell xid="759" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="760" props="font-family:Liberation Serif">frame #:</p>
+</cell>
+<cell xid="762" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="763" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="765" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="766" props="font-family:Liberation Serif">6 </p>
+</cell>
+<cell xid="768" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="769" props="font-family:Liberation Serif">1</p>
+</cell>
+<cell xid="771" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="772" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1540" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="1541" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1543" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="1544" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1546" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="1547" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1549" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="1550" props="font-family:Liberation Serif">10</p>
+</cell>
+</table>
+<p style="Normal" xid="33" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></p>
+<table xid="1719" props="table-column-props:1.200000in/1.200000in/">
+<cell xid="1720" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="1721" props="font-family:Liberation Serif">frames in Mem</p>
+</cell>
+<cell xid="1723" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="1724" props="font-family:Liberation Serif">process#: Page #:</p>
+</cell>
+<cell xid="1726" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="1727" props="font-family:Liberation Serif">f0</p>
+</cell>
+<cell xid="1729" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="1730" props="font-family:Liberation Serif">p2:2</p>
+</cell>
+<cell xid="1732" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="1733" props="font-family:Liberation Serif">f1</p>
+</cell>
+<cell xid="1735" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="1736" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1738" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="1739" props="font-family:Liberation Serif">f2</p>
+</cell>
+<cell xid="1741" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="1742" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1744" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="1745" props="font-family:Liberation Serif">f3</p>
+</cell>
+<cell xid="1747" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="1748" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1750" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="1751" props="font-family:Liberation Serif">f4</p>
+</cell>
+<cell xid="1753" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="1754" props="font-family:Liberation Serif">p1:1 &amp; p2:1</p>
+</cell>
+<cell xid="1756" props="bot-attach:7; left-attach:0; right-attach:1; top-attach:6">
+<p style="Normal" xid="1757" props="font-family:Liberation Serif">f5</p>
+</cell>
+<cell xid="1759" props="bot-attach:7; left-attach:1; right-attach:2; top-attach:6">
+<p style="Normal" xid="1760" props="font-family:Liberation Serif">p1:5</p>
+</cell>
+<cell xid="1762" props="bot-attach:8; left-attach:0; right-attach:1; top-attach:7">
+<p style="Normal" xid="1763" props="font-family:Liberation Serif">f6</p>
+</cell>
+<cell xid="1765" props="bot-attach:8; left-attach:1; right-attach:2; top-attach:7">
+<p style="Normal" xid="1766" props="font-family:Liberation Serif">p1:0 &amp; p2:0</p>
+</cell>
+<cell xid="1768" props="bot-attach:9; left-attach:0; right-attach:1; top-attach:8">
+<p style="Normal" xid="1769" props="font-family:Liberation Serif">f7</p>
+</cell>
+<cell xid="1771" props="bot-attach:9; left-attach:1; right-attach:2; top-attach:8">
+<p style="Normal" xid="1772" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1774" props="bot-attach:10; left-attach:0; right-attach:1; top-attach:9">
+<p style="Normal" xid="1775" props="font-family:Liberation Serif">f8</p>
+</cell>
+<cell xid="1777" props="bot-attach:10; left-attach:1; right-attach:2; top-attach:9">
+<p style="Normal" xid="1778" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1780" props="bot-attach:11; left-attach:0; right-attach:1; top-attach:10">
+<p style="Normal" xid="1781" props="font-family:Liberation Serif">f9</p>
+</cell>
+<cell xid="1783" props="bot-attach:11; left-attach:1; right-attach:2; top-attach:10">
+<p style="Normal" xid="1784" props="font-family:Liberation Serif">p1:6</p>
+</cell>
+<cell xid="1786" props="bot-attach:12; left-attach:0; right-attach:1; top-attach:11">
+<p style="Normal" xid="1787" props="font-family:Liberation Serif">f10</p>
+</cell>
+<cell xid="1789" props="bot-attach:12; left-attach:1; right-attach:2; top-attach:11">
+<p style="Normal" xid="1790" props="font-family:Liberation Serif">p2:3</p>
+</cell>
+<cell xid="1792" props="bot-attach:13; left-attach:0; right-attach:1; top-attach:12">
+<p style="Normal" xid="1793" props="font-family:Liberation Serif">f11</p>
+</cell>
+<cell xid="1795" props="bot-attach:13; left-attach:1; right-attach:2; top-attach:12">
+<p style="Normal" xid="1796" props="font-family:Liberation Serif">p1:2</p>
+</cell>
+<cell xid="1798" props="bot-attach:14; left-attach:0; right-attach:1; top-attach:13">
+<p style="Normal" xid="1799" props="font-family:Liberation Serif">f12</p>
+</cell>
+<cell xid="1801" props="bot-attach:14; left-attach:1; right-attach:2; top-attach:13">
+<p style="Normal" xid="1802" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1804" props="bot-attach:15; left-attach:0; right-attach:1; top-attach:14">
+<p style="Normal" xid="1805" props="font-family:Liberation Serif">f13</p>
+</cell>
+<cell xid="1807" props="bot-attach:15; left-attach:1; right-attach:2; top-attach:14">
+<p style="Normal" xid="1808" props="font-family:Liberation Serif">p1:4</p>
+</cell>
+<cell xid="1810" props="bot-attach:16; left-attach:0; right-attach:1; top-attach:15">
+<p style="Normal" xid="1811" props="font-family:Liberation Serif">f14</p>
+</cell>
+<cell xid="1813" props="bot-attach:16; left-attach:1; right-attach:2; top-attach:15">
+<p style="Normal" xid="1814" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1816" props="bot-attach:17; left-attach:0; right-attach:1; top-attach:16">
+<p style="Normal" xid="1817" props="font-family:Liberation Serif">f15</p>
+</cell>
+<cell xid="1819" props="bot-attach:17; left-attach:1; right-attach:2; top-attach:16">
+<p style="Normal" xid="1820" props="font-family:Liberation Serif">p1:5</p>
+</cell>
+</table>
+<p style="Normal" xid="1559" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">4.</c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="34" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Avg access time = (p_TLB * T) + ((1-p+TLB)*p * D)+((1-p_PTLB)*(1-p)xM)</c></p>
+<p style="Normal" xid="37" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Avg acces time = (.9 × 1ns) + (.001 * .1* 10ms) + (.1 *.999*10ns)= 1001.899</c></p>
+<p style="Normal" xid="38" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="39" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">5. LRU does not suffer from Belady’s anomaly because it replaces pages based on their frequency of use.  So that it will not pull out a page that is being used often, just because it has been in memory for along time.</c></p>
+<p style="Normal" xid="793" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">  Ex. calculating page fault with LRU</c></p>
+<p style="Normal" xid="794" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">	frame allocation of 3</c></p>
+<p style="Normal" xid="798" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">	0 2 3 4 6 4 8 4 6 5 4 4 5 8 7       </c></p>
+<p style="Normal" xid="796" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">           0!2!3!4!6!48!4 6 5!4 4 5 8!7!</c></p>
+<p style="Normal" xid="799" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c><c>	  0  2 3 4 6 4 8 8 6 5 5 4 4 8 </c></p>
+<p style="Normal" xid="797" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c>	      0 2 3 3 6 6 4 4 6 6 6 5 5</c></p>
+<p style="Normal" xid="1074" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c></p>
+<p style="Normal" xid="1486" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">frame allocation 6</c></p>
+<p style="Normal" xid="1485" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">0	2       3        4       6        4           8       4        6         5        4       4       5         8        7      </c></p>
+<table xid="1213">
+<cell xid="1214" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="1215" props="font-family:Liberation Serif">0!</p>
+</cell>
+<cell xid="1217" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="1218" props="font-family:Liberation Serif">2!</p>
+</cell>
+<cell xid="1220" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="1221" props="font-family:Liberation Serif">3!</p>
+</cell>
+<cell xid="1223" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="1224" props="font-family:Liberation Serif">4!</p>
+</cell>
+<cell xid="1226" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="1227" props="font-family:Liberation Serif">6!</p>
+</cell>
+<cell xid="1229" props="bot-attach:1; left-attach:5; right-attach:6; top-attach:0">
+<p style="Normal" xid="1230" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1232" props="bot-attach:1; left-attach:6; right-attach:7; top-attach:0">
+<p style="Normal" xid="1233" props="font-family:Liberation Serif">8!</p>
+</cell>
+<cell xid="1235" props="bot-attach:1; left-attach:7; right-attach:8; top-attach:0">
+<p style="Normal" xid="1236" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1238" props="bot-attach:1; left-attach:8; right-attach:9; top-attach:0">
+<p style="Normal" xid="1239" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1241" props="bot-attach:1; left-attach:9; right-attach:10; top-attach:0">
+<p style="Normal" xid="1242" props="font-family:Liberation Serif">5!</p>
+</cell>
+<cell xid="1244" props="bot-attach:1; left-attach:10; right-attach:11; top-attach:0">
+<p style="Normal" xid="1245" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1247" props="bot-attach:1; left-attach:11; right-attach:12; top-attach:0">
+<p style="Normal" xid="1248" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1250" props="bot-attach:1; left-attach:12; right-attach:13; top-attach:0">
+<p style="Normal" xid="1251" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1253" props="bot-attach:1; left-attach:13; right-attach:14; top-attach:0">
+<p style="Normal" xid="1254" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1256" props="bot-attach:1; left-attach:14; right-attach:15; top-attach:0">
+<p style="Normal" xid="1257" props="font-family:Liberation Serif">7!</p>
+</cell>
+<cell xid="1259" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="1260" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1262" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="1263" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1265" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="1266" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1268" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="1269" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1271" props="bot-attach:2; left-attach:4; right-attach:5; top-attach:1">
+<p style="Normal" xid="1272" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1274" props="bot-attach:2; left-attach:5; right-attach:6; top-attach:1">
+<p style="Normal" xid="1275" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1277" props="bot-attach:2; left-attach:6; right-attach:7; top-attach:1">
+<p style="Normal" xid="1278" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1280" props="bot-attach:2; left-attach:7; right-attach:8; top-attach:1">
+<p style="Normal" xid="1281" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1283" props="bot-attach:2; left-attach:8; right-attach:9; top-attach:1">
+<p style="Normal" xid="1284" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1286" props="bot-attach:2; left-attach:9; right-attach:10; top-attach:1">
+<p style="Normal" xid="1287" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1289" props="bot-attach:2; left-attach:10; right-attach:11; top-attach:1">
+<p style="Normal" xid="1290" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1292" props="bot-attach:2; left-attach:11; right-attach:12; top-attach:1">
+<p style="Normal" xid="1293" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1295" props="bot-attach:2; left-attach:12; right-attach:13; top-attach:1">
+<p style="Normal" xid="1296" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1298" props="bot-attach:2; left-attach:13; right-attach:14; top-attach:1">
+<p style="Normal" xid="1299" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1301" props="bot-attach:2; left-attach:14; right-attach:15; top-attach:1">
+<p style="Normal" xid="1302" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="1304" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="1305" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1307" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="1308" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1310" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="1311" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1313" props="bot-attach:3; left-attach:3; right-attach:4; top-attach:2">
+<p style="Normal" xid="1314" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1316" props="bot-attach:3; left-attach:4; right-attach:5; top-attach:2">
+<p style="Normal" xid="1317" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1319" props="bot-attach:3; left-attach:5; right-attach:6; top-attach:2">
+<p style="Normal" xid="1320" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1322" props="bot-attach:3; left-attach:6; right-attach:7; top-attach:2">
+<p style="Normal" xid="1323" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1325" props="bot-attach:3; left-attach:7; right-attach:8; top-attach:2">
+<p style="Normal" xid="1326" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1328" props="bot-attach:3; left-attach:8; right-attach:9; top-attach:2">
+<p style="Normal" xid="1329" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1331" props="bot-attach:3; left-attach:9; right-attach:10; top-attach:2">
+<p style="Normal" xid="1332" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1334" props="bot-attach:3; left-attach:10; right-attach:11; top-attach:2">
+<p style="Normal" xid="1335" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1337" props="bot-attach:3; left-attach:11; right-attach:12; top-attach:2">
+<p style="Normal" xid="1338" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1340" props="bot-attach:3; left-attach:12; right-attach:13; top-attach:2">
+<p style="Normal" xid="1341" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1343" props="bot-attach:3; left-attach:13; right-attach:14; top-attach:2">
+<p style="Normal" xid="1344" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1346" props="bot-attach:3; left-attach:14; right-attach:15; top-attach:2">
+<p style="Normal" xid="1347" props="font-family:Liberation Serif">8</p>
+</cell>
+<cell xid="1349" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="1350" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1352" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="1353" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1355" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="1356" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1358" props="bot-attach:4; left-attach:3; right-attach:4; top-attach:3">
+<p style="Normal" xid="1359" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1361" props="bot-attach:4; left-attach:4; right-attach:5; top-attach:3">
+<p style="Normal" xid="1362" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1364" props="bot-attach:4; left-attach:5; right-attach:6; top-attach:3">
+<p style="Normal" xid="1365" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1367" props="bot-attach:4; left-attach:6; right-attach:7; top-attach:3">
+<p style="Normal" xid="1368" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1370" props="bot-attach:4; left-attach:7; right-attach:8; top-attach:3">
+<p style="Normal" xid="1371" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1373" props="bot-attach:4; left-attach:8; right-attach:9; top-attach:3">
+<p style="Normal" xid="1374" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1376" props="bot-attach:4; left-attach:9; right-attach:10; top-attach:3">
+<p style="Normal" xid="1377" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1379" props="bot-attach:4; left-attach:10; right-attach:11; top-attach:3">
+<p style="Normal" xid="1380" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1382" props="bot-attach:4; left-attach:11; right-attach:12; top-attach:3">
+<p style="Normal" xid="1383" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1385" props="bot-attach:4; left-attach:12; right-attach:13; top-attach:3">
+<p style="Normal" xid="1386" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1388" props="bot-attach:4; left-attach:13; right-attach:14; top-attach:3">
+<p style="Normal" xid="1389" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1391" props="bot-attach:4; left-attach:14; right-attach:15; top-attach:3">
+<p style="Normal" xid="1392" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="1394" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="1395" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1397" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="1398" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1400" props="bot-attach:5; left-attach:2; right-attach:3; top-attach:4">
+<p style="Normal" xid="1401" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1403" props="bot-attach:5; left-attach:3; right-attach:4; top-attach:4">
+<p style="Normal" xid="1404" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1406" props="bot-attach:5; left-attach:4; right-attach:5; top-attach:4">
+<p style="Normal" xid="1407" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1409" props="bot-attach:5; left-attach:5; right-attach:6; top-attach:4">
+<p style="Normal" xid="1410" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1412" props="bot-attach:5; left-attach:6; right-attach:7; top-attach:4">
+<p style="Normal" xid="1413" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1415" props="bot-attach:5; left-attach:7; right-attach:8; top-attach:4">
+<p style="Normal" xid="1416" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1418" props="bot-attach:5; left-attach:8; right-attach:9; top-attach:4">
+<p style="Normal" xid="1419" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1421" props="bot-attach:5; left-attach:9; right-attach:10; top-attach:4">
+<p style="Normal" xid="1422" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1424" props="bot-attach:5; left-attach:10; right-attach:11; top-attach:4">
+<p style="Normal" xid="1425" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1427" props="bot-attach:5; left-attach:11; right-attach:12; top-attach:4">
+<p style="Normal" xid="1428" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1430" props="bot-attach:5; left-attach:12; right-attach:13; top-attach:4">
+<p style="Normal" xid="1431" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1433" props="bot-attach:5; left-attach:13; right-attach:14; top-attach:4">
+<p style="Normal" xid="1434" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="1436" props="bot-attach:5; left-attach:14; right-attach:15; top-attach:4">
+<p style="Normal" xid="1437" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="1439" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="1440" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1442" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="1443" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1445" props="bot-attach:6; left-attach:2; right-attach:3; top-attach:5">
+<p style="Normal" xid="1446" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1448" props="bot-attach:6; left-attach:3; right-attach:4; top-attach:5">
+<p style="Normal" xid="1449" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1451" props="bot-attach:6; left-attach:4; right-attach:5; top-attach:5">
+<p style="Normal" xid="1452" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1454" props="bot-attach:6; left-attach:5; right-attach:6; top-attach:5">
+<p style="Normal" xid="1455" props="font-family:Liberation Serif"><c></c></p>
+</cell>
+<cell xid="1457" props="bot-attach:6; left-attach:6; right-attach:7; top-attach:5">
+<p style="Normal" xid="1458" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1460" props="bot-attach:6; left-attach:7; right-attach:8; top-attach:5">
+<p style="Normal" xid="1461" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1463" props="bot-attach:6; left-attach:8; right-attach:9; top-attach:5">
+<p style="Normal" xid="1464" props="font-family:Liberation Serif">0</p>
+</cell>
+<cell xid="1466" props="bot-attach:6; left-attach:9; right-attach:10; top-attach:5">
+<p style="Normal" xid="1467" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1469" props="bot-attach:6; left-attach:10; right-attach:11; top-attach:5">
+<p style="Normal" xid="1470" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1472" props="bot-attach:6; left-attach:11; right-attach:12; top-attach:5">
+<p style="Normal" xid="1473" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1475" props="bot-attach:6; left-attach:12; right-attach:13; top-attach:5">
+<p style="Normal" xid="1476" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1478" props="bot-attach:6; left-attach:13; right-attach:14; top-attach:5">
+<p style="Normal" xid="1479" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="1481" props="bot-attach:6; left-attach:14; right-attach:15; top-attach:5">
+<p style="Normal" xid="1482" props="font-family:Liberation Serif">3</p>
+</cell>
+</table>
+<p style="Normal" xid="1212" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">there is one less page fault in the larger frame allocation</c></p>
+<p style="Normal" xid="1488" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="1487" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">6.</c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="627" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">3,2,4,3,4,2,2,3,4,5,6,7,7,6,5,4,5,6,7,2,1</c></p>
+<p style="Normal" xid="44" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">FIFO</c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="629" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">12 page faults</c></p>
+<table xid="45" props="table-row-heights:0.1875in/0.1875in/0.2500in/">
+<cell xid="46" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="47" props="font-family:Liberation Serif">3*</p>
+</cell>
+<cell xid="49" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="50" props="font-family:Liberation Serif">2*</p>
+</cell>
+<cell xid="52" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="53" props="font-family:Liberation Serif">4*</p>
+</cell>
+<cell xid="55" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="56" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="58" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="59" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="61" props="bot-attach:1; left-attach:5; right-attach:6; top-attach:0">
+<p style="Normal" xid="62" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="64" props="bot-attach:1; left-attach:6; right-attach:7; top-attach:0">
+<p style="Normal" xid="65" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="67" props="bot-attach:1; left-attach:7; right-attach:8; top-attach:0">
+<p style="Normal" xid="68" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="70" props="bot-attach:1; left-attach:8; right-attach:9; top-attach:0">
+<p style="Normal" xid="71" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="73" props="bot-attach:1; left-attach:9; right-attach:10; top-attach:0">
+<p style="Normal" xid="74" props="font-family:Liberation Serif"><c></c>5*</p>
+</cell>
+<cell xid="76" props="bot-attach:1; left-attach:10; right-attach:11; top-attach:0">
+<p style="Normal" xid="77" props="font-family:Liberation Serif"><c></c>6*</p>
+</cell>
+<cell xid="79" props="bot-attach:1; left-attach:11; right-attach:12; top-attach:0">
+<p style="Normal" xid="80" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="82" props="bot-attach:1; left-attach:12; right-attach:13; top-attach:0">
+<p style="Normal" xid="83" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="85" props="bot-attach:1; left-attach:13; right-attach:14; top-attach:0">
+<p style="Normal" xid="86" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="88" props="bot-attach:1; left-attach:14; right-attach:15; top-attach:0">
+<p style="Normal" xid="89" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="91" props="bot-attach:1; left-attach:15; right-attach:16; top-attach:0">
+<p style="Normal" xid="92" props="font-family:Liberation Serif">4*</p>
+</cell>
+<cell xid="94" props="bot-attach:1; left-attach:16; right-attach:17; top-attach:0">
+<p style="Normal" xid="95" props="font-family:Liberation Serif"><c></c>5*</p>
+</cell>
+<cell xid="97" props="bot-attach:1; left-attach:17; right-attach:18; top-attach:0">
+<p style="Normal" xid="98" props="font-family:Liberation Serif"><c></c>6*</p>
+</cell>
+<cell xid="100" props="bot-attach:1; left-attach:18; right-attach:19; top-attach:0">
+<p style="Normal" xid="101" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="103" props="bot-attach:1; left-attach:19; right-attach:20; top-attach:0">
+<p style="Normal" xid="104" props="font-family:Liberation Serif"><c></c>2*</p>
+</cell>
+<cell xid="106" props="bot-attach:1; left-attach:20; right-attach:21; top-attach:0">
+<p style="Normal" xid="107" props="font-family:Liberation Serif"><c></c>1*</p>
+</cell>
+<cell xid="109" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="110" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="112" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="113" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="115" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="116" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="118" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="119" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="121" props="bot-attach:2; left-attach:4; right-attach:5; top-attach:1">
+<p style="Normal" xid="122" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="124" props="bot-attach:2; left-attach:5; right-attach:6; top-attach:1">
+<p style="Normal" xid="125" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="127" props="bot-attach:2; left-attach:6; right-attach:7; top-attach:1">
+<p style="Normal" xid="128" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="130" props="bot-attach:2; left-attach:7; right-attach:8; top-attach:1">
+<p style="Normal" xid="131" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="133" props="bot-attach:2; left-attach:8; right-attach:9; top-attach:1">
+<p style="Normal" xid="134" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="136" props="bot-attach:2; left-attach:9; right-attach:10; top-attach:1">
+<p style="Normal" xid="137" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="139" props="bot-attach:2; left-attach:10; right-attach:11; top-attach:1">
+<p style="Normal" xid="140" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="142" props="bot-attach:2; left-attach:11; right-attach:12; top-attach:1">
+<p style="Normal" xid="143" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="145" props="bot-attach:2; left-attach:12; right-attach:13; top-attach:1">
+<p style="Normal" xid="146" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="148" props="bot-attach:2; left-attach:13; right-attach:14; top-attach:1">
+<p style="Normal" xid="149" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="151" props="bot-attach:2; left-attach:14; right-attach:15; top-attach:1">
+<p style="Normal" xid="152" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="154" props="bot-attach:2; left-attach:15; right-attach:16; top-attach:1">
+<p style="Normal" xid="155" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="157" props="bot-attach:2; left-attach:16; right-attach:17; top-attach:1">
+<p style="Normal" xid="158" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="160" props="bot-attach:2; left-attach:17; right-attach:18; top-attach:1">
+<p style="Normal" xid="161" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="163" props="bot-attach:2; left-attach:18; right-attach:19; top-attach:1">
+<p style="Normal" xid="164" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="166" props="bot-attach:2; left-attach:19; right-attach:20; top-attach:1">
+<p style="Normal" xid="167" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="169" props="bot-attach:2; left-attach:20; right-attach:21; top-attach:1">
+<p style="Normal" xid="170" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="172" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="173" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="175" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="176" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="178" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="179" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="181" props="bot-attach:3; left-attach:3; right-attach:4; top-attach:2">
+<p style="Normal" xid="182" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="184" props="bot-attach:3; left-attach:4; right-attach:5; top-attach:2">
+<p style="Normal" xid="185" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="187" props="bot-attach:3; left-attach:5; right-attach:6; top-attach:2">
+<p style="Normal" xid="188" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="190" props="bot-attach:3; left-attach:6; right-attach:7; top-attach:2">
+<p style="Normal" xid="191" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="193" props="bot-attach:3; left-attach:7; right-attach:8; top-attach:2">
+<p style="Normal" xid="194" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="196" props="bot-attach:3; left-attach:8; right-attach:9; top-attach:2">
+<p style="Normal" xid="197" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="199" props="bot-attach:3; left-attach:9; right-attach:10; top-attach:2">
+<p style="Normal" xid="200" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="202" props="bot-attach:3; left-attach:10; right-attach:11; top-attach:2">
+<p style="Normal" xid="203" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="205" props="bot-attach:3; left-attach:11; right-attach:12; top-attach:2">
+<p style="Normal" xid="206" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="208" props="bot-attach:3; left-attach:12; right-attach:13; top-attach:2">
+<p style="Normal" xid="209" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="211" props="bot-attach:3; left-attach:13; right-attach:14; top-attach:2">
+<p style="Normal" xid="212" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="214" props="bot-attach:3; left-attach:14; right-attach:15; top-attach:2">
+<p style="Normal" xid="215" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="217" props="bot-attach:3; left-attach:15; right-attach:16; top-attach:2">
+<p style="Normal" xid="218" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="220" props="bot-attach:3; left-attach:16; right-attach:17; top-attach:2">
+<p style="Normal" xid="221" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="223" props="bot-attach:3; left-attach:17; right-attach:18; top-attach:2">
+<p style="Normal" xid="224" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="226" props="bot-attach:3; left-attach:18; right-attach:19; top-attach:2">
+<p style="Normal" xid="227" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="229" props="bot-attach:3; left-attach:19; right-attach:20; top-attach:2">
+<p style="Normal" xid="230" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="232" props="bot-attach:3; left-attach:20; right-attach:21; top-attach:2">
+<p style="Normal" xid="233" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+</table>
+<p style="Normal" xid="43" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="430" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="626" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">LRU</c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="628" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">10 page faults</c></p>
+<table xid="238">
+<cell xid="239" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="240" props="font-family:Liberation Serif"><c></c>3*</p>
+</cell>
+<cell xid="242" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="243" props="font-family:Liberation Serif"><c></c>2*</p>
+</cell>
+<cell xid="245" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="246" props="font-family:Liberation Serif">4*</p>
+</cell>
+<cell xid="248" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="249" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="251" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="252" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="254" props="bot-attach:1; left-attach:5; right-attach:6; top-attach:0">
+<p style="Normal" xid="255" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="257" props="bot-attach:1; left-attach:6; right-attach:7; top-attach:0">
+<p style="Normal" xid="258" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="260" props="bot-attach:1; left-attach:7; right-attach:8; top-attach:0">
+<p style="Normal" xid="261" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="263" props="bot-attach:1; left-attach:8; right-attach:9; top-attach:0">
+<p style="Normal" xid="264" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="266" props="bot-attach:1; left-attach:9; right-attach:10; top-attach:0">
+<p style="Normal" xid="267" props="font-family:Liberation Serif"><c></c>5*</p>
+</cell>
+<cell xid="269" props="bot-attach:1; left-attach:10; right-attach:11; top-attach:0">
+<p style="Normal" xid="270" props="font-family:Liberation Serif"><c></c>6*</p>
+</cell>
+<cell xid="272" props="bot-attach:1; left-attach:11; right-attach:12; top-attach:0">
+<p style="Normal" xid="273" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="275" props="bot-attach:1; left-attach:12; right-attach:13; top-attach:0">
+<p style="Normal" xid="276" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="278" props="bot-attach:1; left-attach:13; right-attach:14; top-attach:0">
+<p style="Normal" xid="279" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="281" props="bot-attach:1; left-attach:14; right-attach:15; top-attach:0">
+<p style="Normal" xid="282" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="284" props="bot-attach:1; left-attach:15; right-attach:16; top-attach:0">
+<p style="Normal" xid="285" props="font-family:Liberation Serif"><c></c>4*</p>
+</cell>
+<cell xid="287" props="bot-attach:1; left-attach:16; right-attach:17; top-attach:0">
+<p style="Normal" xid="288" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="290" props="bot-attach:1; left-attach:17; right-attach:18; top-attach:0">
+<p style="Normal" xid="291" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="293" props="bot-attach:1; left-attach:18; right-attach:19; top-attach:0">
+<p style="Normal" xid="294" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="296" props="bot-attach:1; left-attach:19; right-attach:20; top-attach:0">
+<p style="Normal" xid="297" props="font-family:Liberation Serif">2*</p>
+</cell>
+<cell xid="299" props="bot-attach:1; left-attach:20; right-attach:21; top-attach:0">
+<p style="Normal" xid="300" props="font-family:Liberation Serif"><c></c>1*</p>
+</cell>
+<cell xid="302" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="303" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="305" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="306" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="308" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="309" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="311" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="312" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="314" props="bot-attach:2; left-attach:4; right-attach:5; top-attach:1">
+<p style="Normal" xid="315" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="317" props="bot-attach:2; left-attach:5; right-attach:6; top-attach:1">
+<p style="Normal" xid="318" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="320" props="bot-attach:2; left-attach:6; right-attach:7; top-attach:1">
+<p style="Normal" xid="321" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="323" props="bot-attach:2; left-attach:7; right-attach:8; top-attach:1">
+<p style="Normal" xid="324" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="326" props="bot-attach:2; left-attach:8; right-attach:9; top-attach:1">
+<p style="Normal" xid="327" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="329" props="bot-attach:2; left-attach:9; right-attach:10; top-attach:1">
+<p style="Normal" xid="330" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="332" props="bot-attach:2; left-attach:10; right-attach:11; top-attach:1">
+<p style="Normal" xid="333" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="335" props="bot-attach:2; left-attach:11; right-attach:12; top-attach:1">
+<p style="Normal" xid="336" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="338" props="bot-attach:2; left-attach:12; right-attach:13; top-attach:1">
+<p style="Normal" xid="339" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="341" props="bot-attach:2; left-attach:13; right-attach:14; top-attach:1">
+<p style="Normal" xid="342" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="344" props="bot-attach:2; left-attach:14; right-attach:15; top-attach:1">
+<p style="Normal" xid="345" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="347" props="bot-attach:2; left-attach:15; right-attach:16; top-attach:1">
+<p style="Normal" xid="348" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="350" props="bot-attach:2; left-attach:16; right-attach:17; top-attach:1">
+<p style="Normal" xid="351" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="353" props="bot-attach:2; left-attach:17; right-attach:18; top-attach:1">
+<p style="Normal" xid="354" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="356" props="bot-attach:2; left-attach:18; right-attach:19; top-attach:1">
+<p style="Normal" xid="357" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="359" props="bot-attach:2; left-attach:19; right-attach:20; top-attach:1">
+<p style="Normal" xid="360" props="font-family:Liberation Serif">7</p>
+</cell>
+<cell xid="362" props="bot-attach:2; left-attach:20; right-attach:21; top-attach:1">
+<p style="Normal" xid="363" props="font-family:Liberation Serif">2</p>
+</cell>
+<cell xid="365" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="366" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="368" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="369" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="371" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="372" props="font-family:Liberation Serif">3</p>
+</cell>
+<cell xid="374" props="bot-attach:3; left-attach:3; right-attach:4; top-attach:2">
+<p style="Normal" xid="375" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="377" props="bot-attach:3; left-attach:4; right-attach:5; top-attach:2">
+<p style="Normal" xid="378" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="380" props="bot-attach:3; left-attach:5; right-attach:6; top-attach:2">
+<p style="Normal" xid="381" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="383" props="bot-attach:3; left-attach:6; right-attach:7; top-attach:2">
+<p style="Normal" xid="384" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="386" props="bot-attach:3; left-attach:7; right-attach:8; top-attach:2">
+<p style="Normal" xid="387" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="389" props="bot-attach:3; left-attach:8; right-attach:9; top-attach:2">
+<p style="Normal" xid="390" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="392" props="bot-attach:3; left-attach:9; right-attach:10; top-attach:2">
+<p style="Normal" xid="393" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="395" props="bot-attach:3; left-attach:10; right-attach:11; top-attach:2">
+<p style="Normal" xid="396" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="398" props="bot-attach:3; left-attach:11; right-attach:12; top-attach:2">
+<p style="Normal" xid="399" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="401" props="bot-attach:3; left-attach:12; right-attach:13; top-attach:2">
+<p style="Normal" xid="402" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="404" props="bot-attach:3; left-attach:13; right-attach:14; top-attach:2">
+<p style="Normal" xid="405" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="407" props="bot-attach:3; left-attach:14; right-attach:15; top-attach:2">
+<p style="Normal" xid="408" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="410" props="bot-attach:3; left-attach:15; right-attach:16; top-attach:2">
+<p style="Normal" xid="411" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="413" props="bot-attach:3; left-attach:16; right-attach:17; top-attach:2">
+<p style="Normal" xid="414" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="416" props="bot-attach:3; left-attach:17; right-attach:18; top-attach:2">
+<p style="Normal" xid="417" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="419" props="bot-attach:3; left-attach:18; right-attach:19; top-attach:2">
+<p style="Normal" xid="420" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="422" props="bot-attach:3; left-attach:19; right-attach:20; top-attach:2">
+<p style="Normal" xid="423" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="425" props="bot-attach:3; left-attach:20; right-attach:21; top-attach:2">
+<p style="Normal" xid="426" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+</table>
+<p style="Normal" xid="41" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="431" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">OPT</c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="630" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">3,2,4,3,4,2,2,3,4,5,6,7,7,6,5,4,5,6,7,2,1</c></p>
+<p style="Normal" xid="631" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">10 page faults</c></p>
+<table xid="433" props="table-row-heights:0.1875in/0.2500in/0.2500in/; table-column-props:0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/0.3125in/">
+<cell xid="434" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="435" props="font-family:Liberation Serif"><c></c>3*</p>
+</cell>
+<cell xid="437" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="438" props="font-family:Liberation Serif">2*</p>
+</cell>
+<cell xid="440" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="441" props="font-family:Liberation Serif"><c></c>4*</p>
+</cell>
+<cell xid="443" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="444" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="446" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="447" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="449" props="bot-attach:1; left-attach:5; right-attach:6; top-attach:0">
+<p style="Normal" xid="450" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="452" props="bot-attach:1; left-attach:6; right-attach:7; top-attach:0">
+<p style="Normal" xid="453" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="455" props="bot-attach:1; left-attach:7; right-attach:8; top-attach:0">
+<p style="Normal" xid="456" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="458" props="bot-attach:1; left-attach:8; right-attach:9; top-attach:0">
+<p style="Normal" xid="459" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="461" props="bot-attach:1; left-attach:9; right-attach:10; top-attach:0">
+<p style="Normal" xid="462" props="font-family:Liberation Serif"><c></c>5*</p>
+</cell>
+<cell xid="464" props="bot-attach:1; left-attach:10; right-attach:11; top-attach:0">
+<p style="Normal" xid="465" props="font-family:Liberation Serif"><c></c>6*</p>
+</cell>
+<cell xid="467" props="bot-attach:1; left-attach:11; right-attach:12; top-attach:0">
+<p style="Normal" xid="468" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="470" props="bot-attach:1; left-attach:12; right-attach:13; top-attach:0">
+<p style="Normal" xid="471" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="473" props="bot-attach:1; left-attach:13; right-attach:14; top-attach:0">
+<p style="Normal" xid="474" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="476" props="bot-attach:1; left-attach:14; right-attach:15; top-attach:0">
+<p style="Normal" xid="477" props="font-family:Liberation Serif">7</p>
+</cell>
+<cell xid="479" props="bot-attach:1; left-attach:15; right-attach:16; top-attach:0">
+<p style="Normal" xid="480" props="font-family:Liberation Serif"><c></c>4*</p>
+</cell>
+<cell xid="482" props="bot-attach:1; left-attach:16; right-attach:17; top-attach:0">
+<p style="Normal" xid="483" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="485" props="bot-attach:1; left-attach:17; right-attach:18; top-attach:0">
+<p style="Normal" xid="486" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="488" props="bot-attach:1; left-attach:18; right-attach:19; top-attach:0">
+<p style="Normal" xid="489" props="font-family:Liberation Serif"><c></c>7*</p>
+</cell>
+<cell xid="491" props="bot-attach:1; left-attach:19; right-attach:20; top-attach:0">
+<p style="Normal" xid="492" props="font-family:Liberation Serif">2*</p>
+</cell>
+<cell xid="494" props="bot-attach:1; left-attach:20; right-attach:21; top-attach:0">
+<p style="Normal" xid="495" props="font-family:Liberation Serif"><c></c>1*</p>
+</cell>
+<cell xid="497" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="498" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="500" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="501" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="503" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="504" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="506" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="507" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="509" props="bot-attach:2; left-attach:4; right-attach:5; top-attach:1">
+<p style="Normal" xid="510" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="512" props="bot-attach:2; left-attach:5; right-attach:6; top-attach:1">
+<p style="Normal" xid="513" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="515" props="bot-attach:2; left-attach:6; right-attach:7; top-attach:1">
+<p style="Normal" xid="516" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="518" props="bot-attach:2; left-attach:7; right-attach:8; top-attach:1">
+<p style="Normal" xid="519" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="521" props="bot-attach:2; left-attach:8; right-attach:9; top-attach:1">
+<p style="Normal" xid="522" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="524" props="bot-attach:2; left-attach:9; right-attach:10; top-attach:1">
+<p style="Normal" xid="525" props="font-family:Liberation Serif"><c></c>4</p>
+</cell>
+<cell xid="527" props="bot-attach:2; left-attach:10; right-attach:11; top-attach:1">
+<p style="Normal" xid="528" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="530" props="bot-attach:2; left-attach:11; right-attach:12; top-attach:1">
+<p style="Normal" xid="531" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="533" props="bot-attach:2; left-attach:12; right-attach:13; top-attach:1">
+<p style="Normal" xid="534" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="536" props="bot-attach:2; left-attach:13; right-attach:14; top-attach:1">
+<p style="Normal" xid="537" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="539" props="bot-attach:2; left-attach:14; right-attach:15; top-attach:1">
+<p style="Normal" xid="540" props="font-family:Liberation Serif">6</p>
+</cell>
+<cell xid="542" props="bot-attach:2; left-attach:15; right-attach:16; top-attach:1">
+<p style="Normal" xid="543" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="545" props="bot-attach:2; left-attach:16; right-attach:17; top-attach:1">
+<p style="Normal" xid="546" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="548" props="bot-attach:2; left-attach:17; right-attach:18; top-attach:1">
+<p style="Normal" xid="549" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="551" props="bot-attach:2; left-attach:18; right-attach:19; top-attach:1">
+<p style="Normal" xid="552" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="554" props="bot-attach:2; left-attach:19; right-attach:20; top-attach:1">
+<p style="Normal" xid="555" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+<cell xid="557" props="bot-attach:2; left-attach:20; right-attach:21; top-attach:1">
+<p style="Normal" xid="558" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="560" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="561" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="563" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="564" props="font-family:Liberation Serif"><c></c><c></c></p>
+</cell>
+<cell xid="566" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="567" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="569" props="bot-attach:3; left-attach:3; right-attach:4; top-attach:2">
+<p style="Normal" xid="570" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="572" props="bot-attach:3; left-attach:4; right-attach:5; top-attach:2">
+<p style="Normal" xid="573" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="575" props="bot-attach:3; left-attach:5; right-attach:6; top-attach:2">
+<p style="Normal" xid="576" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="578" props="bot-attach:3; left-attach:6; right-attach:7; top-attach:2">
+<p style="Normal" xid="579" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="581" props="bot-attach:3; left-attach:7; right-attach:8; top-attach:2">
+<p style="Normal" xid="582" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="584" props="bot-attach:3; left-attach:8; right-attach:9; top-attach:2">
+<p style="Normal" xid="585" props="font-family:Liberation Serif"><c></c>3</p>
+</cell>
+<cell xid="587" props="bot-attach:3; left-attach:9; right-attach:10; top-attach:2">
+<p style="Normal" xid="588" props="font-family:Liberation Serif"><c></c>2</p>
+</cell>
+<cell xid="590" props="bot-attach:3; left-attach:10; right-attach:11; top-attach:2">
+<p style="Normal" xid="591" props="font-family:Liberation Serif">4</p>
+</cell>
+<cell xid="593" props="bot-attach:3; left-attach:11; right-attach:12; top-attach:2">
+<p style="Normal" xid="594" props="font-family:Liberation Serif">5</p>
+</cell>
+<cell xid="596" props="bot-attach:3; left-attach:12; right-attach:13; top-attach:2">
+<p style="Normal" xid="597" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="599" props="bot-attach:3; left-attach:13; right-attach:14; top-attach:2">
+<p style="Normal" xid="600" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="602" props="bot-attach:3; left-attach:14; right-attach:15; top-attach:2">
+<p style="Normal" xid="603" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="605" props="bot-attach:3; left-attach:15; right-attach:16; top-attach:2">
+<p style="Normal" xid="606" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="608" props="bot-attach:3; left-attach:16; right-attach:17; top-attach:2">
+<p style="Normal" xid="609" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="611" props="bot-attach:3; left-attach:17; right-attach:18; top-attach:2">
+<p style="Normal" xid="612" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="614" props="bot-attach:3; left-attach:18; right-attach:19; top-attach:2">
+<p style="Normal" xid="615" props="font-family:Liberation Serif"><c></c>5</p>
+</cell>
+<cell xid="617" props="bot-attach:3; left-attach:19; right-attach:20; top-attach:2">
+<p style="Normal" xid="618" props="font-family:Liberation Serif"><c></c>6</p>
+</cell>
+<cell xid="620" props="bot-attach:3; left-attach:20; right-attach:21; top-attach:2">
+<p style="Normal" xid="621" props="font-family:Liberation Serif"><c></c>7</p>
+</cell>
+</table>
+<p style="Normal" xid="432" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="624" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">7.</c></p>
+<p style="Normal" xid="788" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">		{3245}</c></p>
+<p style="Normal" xid="632" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">{3 2 4 3 {4 {2 2} 3 4 5} 6 7 7 6 5 4 5 6 7 2 1</c></p>
+<p style="Normal" xid="35" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">	{324}</c></p>
+<p style="Normal" xid="790" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">			{324567}</c></p>
+<p style="Normal" xid="789" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">{3 2 4 3 4 {2 {2 3 4 5 6} 7} 7 6 5 4 5 6 7 2 1}</c></p>
+<p style="Normal" xid="36" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">		{32456}</c></p>
+<p style="Normal" xid="792" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">					{324567}</c></p>
+<p style="Normal" xid="791" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">{3 2 4 3 4 2 2 3 4 5 6 7 7 6 {5 {4 5 6 7 2 }1}} </c></p>
+<p style="Normal" xid="31" props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Liberation Serif; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">				{324567}</c></p>
+</section>
+</abiword>

@@ -1,0 +1,127 @@
+#/!/bin/bash
+
+#File: testscript
+#Author: Andy Sayler
+#Project: CSCI 3753 Programming Assignment 3
+#Create Date: 2012/03/09
+#Modify Date: 2012/03/21
+#Description:
+#	A simple bash script to run a signle copy of each test case
+#	and gather the relevent data.
+
+ITERATIONS=100000 #100000000
+SML=6
+MED=9
+LRG=12
+BYTESTOCOPY=102400
+BLOCKSIZE=1024
+INPUTNAME=rwinput
+OUTPUTNAME=rwoutput
+INPUTFILES=names1.txt names2.txt names3.txt
+RESULTS=results.txt
+MAKE="make -s"
+
+echo Building code...
+$MAKE clean
+$MAKE
+
+echo Starting test runs...
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_OTHER with 64 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_OTHER $SML >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_FIFO with 64 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_FIFO $SML >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_RR with 64 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_RR $SML >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_OTHER with 64 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_OTHER >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_FIFO with 64 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_FIFO >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_RR with 64 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_RR >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_OTHER with 64 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_OTHER $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_FIFO with 64 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_FIFO $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_RR with 64 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $SML SCHED_RR $ITERATIONS >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_OTHER with 512 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_OTHER $MED >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_FIFO with 512 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_FIFO $MED >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_RR with 512 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_RR $MED >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_OTHER with 512 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_OTHER >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_FIFO with 512 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_FIFO >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_RR with 512 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_RR >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_OTHER with 512 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_OTHER $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_FIFO with 512 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_FIFO $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_RR with 512 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $MED SCHED_RR $ITERATIONS >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_OTHER with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_OTHER $LRG >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_FIFO with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_FIFO $LRG >> output
+
+echo Calculating pi over $ITERATIONS iterations using SCHED_RR with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./pi-sched $ITERATIONS SCHED_RR $LRG >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_OTHER with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_OTHER >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_FIFO with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_FIFO >> output
+
+echo Copying $BYTESTOCOPY bytes in blocks of $BLOCKSIZE from rwinput to rwoutput
+echo using SCHED_RR with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./rw $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_RR >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_OTHER with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_OTHER $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_FIFO with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_FIFO $ITERATIONS >> output
+
+echo Running mixed CPU/IO bound process
+echo using SCHED_RR with 4096 simultaneous processes...
+/usr/bin/time -v sudo ./mixed $BYTESTOCOPY $BLOCKSIZE $INPUTNAME $OUTPUTNAME $LRG SCHED_RR $ITERATIONS >> output

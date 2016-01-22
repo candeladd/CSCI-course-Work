@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="1420" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.0" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="0.99.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Sun Nov  8 13:55:35 2015
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">user</m>
+<m key="dc.date">Sun Nov  8 09:05:06 2015
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="3" edit-time="20708" last-saved="1447016135" uid="d7d12440-862a-11e5-828e-9707ab5a12c2">
+<version id="3" started="1446998706" uid="0f0201e8-865b-11e5-828e-9707ab5a12c2" auto="0" top-xid="16"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="Letter" orientation="portrait" width="8.500000" height="11.000000" units="in" page-scale="1.000000"/>
+<section xid="9" props="column-line:off; columns:2; dom-dir:ltr; section-space-after:0.2500in; page-margin-footer:0.5in; page-margin-header:0.5in; text-align:left; section-max-column-height:0.0000in">
+<p style="Normal" xid="10"><c></c><c>Andrew Candelaresi</c></p>
+<p style="Normal" xid="3"><c></c></p>
+<p style="Normal" xid="4" props="text-align:center"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Linux Scheduler Analysis</c></p>
+<p style="Normal" xid="8" props="text-align:center"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="5" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Abstract:</c></p>
+<p style="Normal" xid="6" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="7" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">For this paper we looked at three different Linux schedulers. These were the CFS scheduler, (used most by Linux OS) First in First Out Scheduler fifo, and Round Robin Scheduler RR.  To asses the ability of each of these schedulers we ran them each with three  different types of processes, one that was computation bound, one that was I/O bound and one that was a mix of both.  Then we ran each of these three different processes at three different sizes a small, medium and large versions.  We took the results of this process and analyzed the data looking at the amount of user time, cpu time, and the number of voluntary and involuntary context switches.  Based on these data points we developed some conclusions about which schedulers performed best under which conditions.</c></p>
+<p style="Normal" xid="23" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="24" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">INTRODUCTION:</c></p>
+<p style="Normal" xid="25" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Coming up with efficient process scheduling policy is a task that computer engineers have been working on for years.  Many different strategies have been developed over the past decades.  A few of these scheduling policies have been shown through proof and analysis to be significantly better than others.  For this project we have taken three such processes and and analyzed their run time with three different types of processes using a large, medium and small amounts of simultaneous processes.  This way we can see not only how these Schedulers compare with different types of processes, but also how the algorithms used in each scheduler scale as the size of data .  </c></p>
+<p style="Normal" xid="26" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="704" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Method:</c></p>
+<p style="Normal" xid="705" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="27" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">The different types of processes we used are co, I/O bound, and a mix of computation and I/O bound. We used a program called pi which uses a randomized process that generates the number pi.  This program is compute bound meaning that it uses up lots of CPU doing calculations.  The program generates a more accurate number the higher the iterations are, so we used 100,000 iterations.  This was our first developed benchmark. </c></p>
+<p style="Normal" xid="1413" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="1414" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"> We used a program that copies N bytes form a input file to an output file.  The process writes 102400 bytes in blocks of 1024.  </c></p>
+<p style="Normal" xid="1415" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="1416" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">For the mixed I/O and compute bound we combined the pi process with the write to disk process, using the same parameters of iterations and writes as a benchmark. </c></p>
+<p style="Normal" xid="28" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="29" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">We then developed size benchmarks as follows.  The number of processes running simultaneously was considered to be small at 64, medium at 512 and large at 4096. </c></p>
+<p style="Normal" xid="702" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="1412" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">A bash script was written that would run all the test process in succession.  We used a makefile to compile all off the test process.  We set the -wall and -wesxtra error checking flags set to check for any errors.   This bash script ran the pi process on each scheduler with the smallest simultaneous processes.  Then it ran the the I/O bound processes with the smallest simultaneous processes. it then proceeded to run the mixed I/O process with the smallest simultaneous processes.  Once  all the processes had finished running with the smallest number of simultaneous processes it the script runs the medium (512) simultaneous processes in for each process and scheduler in the same order.  Finally the largest (4096)  simultaneous processes are run on all schedulers with all processes.  </c></p>
+<p style="Normal" xid="1417" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="1418" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">RESULTS:</c></p>
+<p style="Normal" xid="1419" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="706" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="707" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="708" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="709" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="710" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="711" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="712" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="713" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="714" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="715" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="716" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="717" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="718" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="719" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="720" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="721" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="722" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="723" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="724" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="725" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="726" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="727" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="728" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="729" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="730" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="731" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="732" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="733" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="734" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="735" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="736" props="text-align:left; dom-dir:ltr"><c>Raw Data:</c></p>
+<p style="Normal" xid="1411" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="1410" props="text-align:left; dom-dir:ltr"><c></c><c>Building code...</c></p>
+<p style="Normal" xid="738" props="text-align:left; dom-dir:ltr"><c>1024+0 records in</c></p>
+<p style="Normal" xid="739" props="text-align:left; dom-dir:ltr"><c>1024+0 records out</c></p>
+<p style="Normal" xid="740" props="text-align:left; dom-dir:ltr"><c>1048576 bytes (1.0 MB) copied, 0.310337 s, 3.4 MB/s</c></p>
+<p style="Normal" xid="741" props="text-align:left; dom-dir:ltr"><c>Starting test runs...</c></p>
+<p style="Normal" xid="742" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_OTHER with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="743" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_OTHER 6"</c></p>
+<p style="Normal" xid="744" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 1.43</c></p>
+<p style="Normal" xid="745" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.24</c></p>
+<p style="Normal" xid="746" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 96%</c></p>
+<p style="Normal" xid="747" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.74</c></p>
+<p style="Normal" xid="748" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="749" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="750" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="751" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="752" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4288</c></p>
+<p style="Normal" xid="753" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="754" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="755" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3022</c></p>
+<p style="Normal" xid="756" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 130</c></p>
+<p style="Normal" xid="757" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 434</c></p>
+<p style="Normal" xid="758" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="759" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="760" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 520</c></p>
+<p style="Normal" xid="761" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="762" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="763" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="764" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="765" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="766" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_FIFO with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="767" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_FIFO 6"</c></p>
+<p style="Normal" xid="768" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 1.69</c></p>
+<p style="Normal" xid="769" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.08</c></p>
+<p style="Normal" xid="770" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 191%</c></p>
+<p style="Normal" xid="771" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.93</c></p>
+<p style="Normal" xid="772" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="773" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="774" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="775" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="776" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4300</c></p>
+<p style="Normal" xid="777" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="778" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="779" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3021</c></p>
+<p style="Normal" xid="780" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 130</c></p>
+<p style="Normal" xid="781" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 7</c></p>
+<p style="Normal" xid="782" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="783" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="784" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 528</c></p>
+<p style="Normal" xid="785" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="786" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="787" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="788" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="789" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="790" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_RR with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="791" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_RR 6"</c></p>
+<p style="Normal" xid="792" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 1.60</c></p>
+<p style="Normal" xid="793" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.06</c></p>
+<p style="Normal" xid="794" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 181%</c></p>
+<p style="Normal" xid="795" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.92</c></p>
+<p style="Normal" xid="796" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="797" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="798" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="799" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="800" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4192</c></p>
+<p style="Normal" xid="801" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="802" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="803" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3081</c></p>
+<p style="Normal" xid="804" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 130</c></p>
+<p style="Normal" xid="805" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 21</c></p>
+<p style="Normal" xid="806" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="807" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="808" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 520</c></p>
+<p style="Normal" xid="809" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="810" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="811" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="812" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="813" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="814" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="815" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="816" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 6 SCHED_OTHER"</c></p>
+<p style="Normal" xid="817" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.01</c></p>
+<p style="Normal" xid="818" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 3.09</c></p>
+<p style="Normal" xid="819" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 46%</c></p>
+<p style="Normal" xid="820" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.74</c></p>
+<p style="Normal" xid="821" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="822" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="823" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="824" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="825" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4240</c></p>
+<p style="Normal" xid="826" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="827" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="828" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 2795</c></p>
+<p style="Normal" xid="829" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 12829</c></p>
+<p style="Normal" xid="830" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 7399</c></p>
+<p style="Normal" xid="831" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="832" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="833" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 207656</c></p>
+<p style="Normal" xid="834" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="835" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="836" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="837" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="838" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="839" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="840" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="841" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 6 SCHED_FIFO"</c></p>
+<p style="Normal" xid="842" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.07</c></p>
+<p style="Normal" xid="843" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 8.50</c></p>
+<p style="Normal" xid="844" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 104%</c></p>
+<p style="Normal" xid="845" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.24</c></p>
+<p style="Normal" xid="846" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="847" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="848" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="849" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="850" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4276</c></p>
+<p style="Normal" xid="851" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="852" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="853" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 2734</c></p>
+<p style="Normal" xid="854" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 27220</c></p>
+<p style="Normal" xid="855" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 11</c></p>
+<p style="Normal" xid="856" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="857" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="858" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 393824</c></p>
+<p style="Normal" xid="859" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="860" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="861" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="862" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="863" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="864" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="865" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="866" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 6 SCHED_RR"</c></p>
+<p style="Normal" xid="867" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.05</c></p>
+<p style="Normal" xid="868" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 7.94</c></p>
+<p style="Normal" xid="869" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 104%</c></p>
+<p style="Normal" xid="870" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.65</c></p>
+<p style="Normal" xid="871" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="872" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="873" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="874" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="875" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4268</c></p>
+<p style="Normal" xid="876" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="877" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="878" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 2670</c></p>
+<p style="Normal" xid="879" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 26321</c></p>
+<p style="Normal" xid="880" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 22</c></p>
+<p style="Normal" xid="881" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="882" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="883" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 327904</c></p>
+<p style="Normal" xid="884" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="885" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="886" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="887" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="888" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="889" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="890" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="891" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 6 SCHED_OTHER 100000"</c></p>
+<p style="Normal" xid="892" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 1.26</c></p>
+<p style="Normal" xid="893" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 3.32</c></p>
+<p style="Normal" xid="894" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 57%</c></p>
+<p style="Normal" xid="895" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.92</c></p>
+<p style="Normal" xid="896" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="897" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="898" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="899" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="900" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="901" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="902" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="903" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3300</c></p>
+<p style="Normal" xid="904" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 12659</c></p>
+<p style="Normal" xid="905" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 8573</c></p>
+<p style="Normal" xid="906" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="907" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="908" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 217512</c></p>
+<p style="Normal" xid="909" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="910" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="911" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="912" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="913" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="914" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="915" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="916" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 6 SCHED_FIFO 100000"</c></p>
+<p style="Normal" xid="917" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 2.06</c></p>
+<p style="Normal" xid="918" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 8.17</c></p>
+<p style="Normal" xid="919" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 115%</c></p>
+<p style="Normal" xid="920" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.85</c></p>
+<p style="Normal" xid="921" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="922" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="923" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="924" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="925" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4148</c></p>
+<p style="Normal" xid="926" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="927" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="928" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3300</c></p>
+<p style="Normal" xid="929" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 27092</c></p>
+<p style="Normal" xid="930" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 7</c></p>
+<p style="Normal" xid="931" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="932" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="933" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 414408</c></p>
+<p style="Normal" xid="934" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="935" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="936" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="937" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="938" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="939" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="940" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 64 simultaneous processes...</c></p>
+<p style="Normal" xid="941" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 6 SCHED_RR 100000"</c></p>
+<p style="Normal" xid="942" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 1.93</c></p>
+<p style="Normal" xid="943" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 7.93</c></p>
+<p style="Normal" xid="944" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 113%</c></p>
+<p style="Normal" xid="945" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.69</c></p>
+<p style="Normal" xid="946" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="947" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="948" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="949" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="950" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="951" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="952" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="953" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 3175</c></p>
+<p style="Normal" xid="954" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 27383</c></p>
+<p style="Normal" xid="955" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 26</c></p>
+<p style="Normal" xid="956" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="957" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="958" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 425760</c></p>
+<p style="Normal" xid="959" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="960" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="961" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="962" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="963" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="964" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_OTHER with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="965" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_OTHER 9"</c></p>
+<p style="Normal" xid="966" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 12.38</c></p>
+<p style="Normal" xid="967" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.53</c></p>
+<p style="Normal" xid="968" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 93%</c></p>
+<p style="Normal" xid="969" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.79</c></p>
+<p style="Normal" xid="970" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="971" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="972" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="973" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="974" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4276</c></p>
+<p style="Normal" xid="975" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="976" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="977" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 21233</c></p>
+<p style="Normal" xid="978" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 1257</c></p>
+<p style="Normal" xid="979" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 4150</c></p>
+<p style="Normal" xid="980" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="981" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="982" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 4200</c></p>
+<p style="Normal" xid="983" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="984" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="985" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="986" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="987" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="988" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_FIFO with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="989" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_FIFO 9"</c></p>
+<p style="Normal" xid="990" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 10.05</c></p>
+<p style="Normal" xid="991" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.43</c></p>
+<p style="Normal" xid="992" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 190%</c></p>
+<p style="Normal" xid="993" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.50</c></p>
+<p style="Normal" xid="994" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="995" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="996" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="997" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="998" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="999" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1000" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1001" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 19691</c></p>
+<p style="Normal" xid="1002" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 1026</c></p>
+<p style="Normal" xid="1003" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 13</c></p>
+<p style="Normal" xid="1004" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1005" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1006" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 4184</c></p>
+<p style="Normal" xid="1007" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1008" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1009" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1010" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1011" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1012" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_RR with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1013" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_RR 9"</c></p>
+<p style="Normal" xid="1014" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 12.04</c></p>
+<p style="Normal" xid="1015" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 0.62</c></p>
+<p style="Normal" xid="1016" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 190%</c></p>
+<p style="Normal" xid="1017" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.65</c></p>
+<p style="Normal" xid="1018" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1019" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1020" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1021" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1022" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4280</c></p>
+<p style="Normal" xid="1023" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1024" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1025" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 21232</c></p>
+<p style="Normal" xid="1026" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 1026</c></p>
+<p style="Normal" xid="1027" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 15</c></p>
+<p style="Normal" xid="1028" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1029" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1030" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 4200</c></p>
+<p style="Normal" xid="1031" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1032" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1033" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1034" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1035" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1036" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1037" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1038" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 9 SCHED_OTHER"</c></p>
+<p style="Normal" xid="1039" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.11</c></p>
+<p style="Normal" xid="1040" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 14.16</c></p>
+<p style="Normal" xid="1041" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 45%</c></p>
+<p style="Normal" xid="1042" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:31.07</c></p>
+<p style="Normal" xid="1043" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1044" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1045" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1046" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1047" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4248</c></p>
+<p style="Normal" xid="1048" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1049" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1050" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 17389</c></p>
+<p style="Normal" xid="1051" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 106307</c></p>
+<p style="Normal" xid="1052" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 38396</c></p>
+<p style="Normal" xid="1053" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1054" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1055" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 857528</c></p>
+<p style="Normal" xid="1056" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1057" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1058" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1059" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1060" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1061" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1062" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1063" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 9 SCHED_FIFO"</c></p>
+<p style="Normal" xid="1064" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.31</c></p>
+<p style="Normal" xid="1065" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 55.77</c></p>
+<p style="Normal" xid="1066" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 125%</c></p>
+<p style="Normal" xid="1067" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:44.56</c></p>
+<p style="Normal" xid="1068" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1069" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1070" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1071" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1072" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="1073" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1074" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1075" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 18925</c></p>
+<p style="Normal" xid="1076" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 219599</c></p>
+<p style="Normal" xid="1077" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 21</c></p>
+<p style="Normal" xid="1078" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1079" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1080" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 2509112</c></p>
+<p style="Normal" xid="1081" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1082" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1083" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1084" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1085" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1086" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1087" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1088" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 9 SCHED_RR"</c></p>
+<p style="Normal" xid="1089" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.19</c></p>
+<p style="Normal" xid="1090" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 19.97</c></p>
+<p style="Normal" xid="1091" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 84%</c></p>
+<p style="Normal" xid="1092" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:23.93</c></p>
+<p style="Normal" xid="1093" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1094" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1095" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1096" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1097" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4192</c></p>
+<p style="Normal" xid="1098" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1099" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1100" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 17385</c></p>
+<p style="Normal" xid="1101" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 230746</c></p>
+<p style="Normal" xid="1102" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 27</c></p>
+<p style="Normal" xid="1103" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1104" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1105" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 2112304</c></p>
+<p style="Normal" xid="1106" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1107" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1108" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1109" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1110" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1111" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1112" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1113" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 9 SCHED_OTHER 100000"</c></p>
+<p style="Normal" xid="1114" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 2.71</c></p>
+<p style="Normal" xid="1115" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 5.20</c></p>
+<p style="Normal" xid="1116" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 35%</c></p>
+<p style="Normal" xid="1117" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:22.47</c></p>
+<p style="Normal" xid="1118" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1119" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1120" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1121" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1122" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="1123" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1124" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1125" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 22502</c></p>
+<p style="Normal" xid="1126" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 114575</c></p>
+<p style="Normal" xid="1127" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 33890</c></p>
+<p style="Normal" xid="1128" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1129" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1130" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 919744</c></p>
+<p style="Normal" xid="1131" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1132" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1133" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1134" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1135" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1136" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1137" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1138" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 9 SCHED_FIFO 100000"</c></p>
+<p style="Normal" xid="1139" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 3.94</c></p>
+<p style="Normal" xid="1140" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 9.74</c></p>
+<p style="Normal" xid="1141" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 50%</c></p>
+<p style="Normal" xid="1142" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.96</c></p>
+<p style="Normal" xid="1143" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1144" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1145" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1146" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1147" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4200</c></p>
+<p style="Normal" xid="1148" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1149" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1150" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 22514</c></p>
+<p style="Normal" xid="1151" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 217268</c></p>
+<p style="Normal" xid="1152" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 12</c></p>
+<p style="Normal" xid="1153" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1154" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1155" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 1350984</c></p>
+<p style="Normal" xid="1156" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1157" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1158" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1159" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1160" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1161" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1162" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 512 simultaneous processes...</c></p>
+<p style="Normal" xid="1163" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 9 SCHED_RR 100000"</c></p>
+<p style="Normal" xid="1164" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 3.99</c></p>
+<p style="Normal" xid="1165" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 10.64</c></p>
+<p style="Normal" xid="1166" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 78%</c></p>
+<p style="Normal" xid="1167" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.53</c></p>
+<p style="Normal" xid="1168" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1169" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1170" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1171" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1172" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4196</c></p>
+<p style="Normal" xid="1173" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1174" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1175" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 21485</c></p>
+<p style="Normal" xid="1176" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 237142</c></p>
+<p style="Normal" xid="1177" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 6</c></p>
+<p style="Normal" xid="1178" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1179" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1180" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 1602984</c></p>
+<p style="Normal" xid="1181" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1182" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1183" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1184" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1185" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1186" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_OTHER with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1187" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_OTHER 12"</c></p>
+<p style="Normal" xid="1188" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 26.02</c></p>
+<p style="Normal" xid="1189" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 2.31</c></p>
+<p style="Normal" xid="1190" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 99%</c></p>
+<p style="Normal" xid="1191" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:28.55</c></p>
+<p style="Normal" xid="1192" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1193" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1194" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1195" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1196" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4196</c></p>
+<p style="Normal" xid="1197" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1198" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1199" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 145907</c></p>
+<p style="Normal" xid="1200" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 10424</c></p>
+<p style="Normal" xid="1201" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 7607</c></p>
+<p style="Normal" xid="1202" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1203" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1204" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 33536</c></p>
+<p style="Normal" xid="1205" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1206" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1207" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1208" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1209" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1210" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_FIFO with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1211" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_FIFO 12"</c></p>
+<p style="Normal" xid="1212" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 25.74</c></p>
+<p style="Normal" xid="1213" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 1.75</c></p>
+<p style="Normal" xid="1214" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 190%</c></p>
+<p style="Normal" xid="1215" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.44</c></p>
+<p style="Normal" xid="1216" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1217" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1218" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1219" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1220" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4252</c></p>
+<p style="Normal" xid="1221" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1222" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1223" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 162298</c></p>
+<p style="Normal" xid="1224" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 8191</c></p>
+<p style="Normal" xid="1225" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 29</c></p>
+<p style="Normal" xid="1226" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1227" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1228" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 33536</c></p>
+<p style="Normal" xid="1229" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1230" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1231" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1232" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1233" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1234" props="text-align:left; dom-dir:ltr"><c>Calculating pi over 100000 iterations using SCHED_RR with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1235" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./pi-sched 100000 SCHED_RR 12"</c></p>
+<p style="Normal" xid="1236" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 24.81</c></p>
+<p style="Normal" xid="1237" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 1.81</c></p>
+<p style="Normal" xid="1238" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 190%</c></p>
+<p style="Normal" xid="1239" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.99</c></p>
+<p style="Normal" xid="1240" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1241" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1242" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1243" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1244" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4196</c></p>
+<p style="Normal" xid="1245" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1246" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1247" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 150007</c></p>
+<p style="Normal" xid="1248" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 8177</c></p>
+<p style="Normal" xid="1249" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 24</c></p>
+<p style="Normal" xid="1250" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1251" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1252" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 33536</c></p>
+<p style="Normal" xid="1253" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1254" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1255" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1256" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1257" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1258" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1259" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1260" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 12 SCHED_OTHER"</c></p>
+<p style="Normal" xid="1261" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.14</c></p>
+<p style="Normal" xid="1262" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 34.61</c></p>
+<p style="Normal" xid="1263" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 50%</c></p>
+<p style="Normal" xid="1264" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:09.13</c></p>
+<p style="Normal" xid="1265" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1266" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1267" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1268" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1269" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4276</c></p>
+<p style="Normal" xid="1270" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1271" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1272" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 152058</c></p>
+<p style="Normal" xid="1273" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 1162827</c></p>
+<p style="Normal" xid="1274" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 280383</c></p>
+<p style="Normal" xid="1275" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1276" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1277" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 5091520</c></p>
+<p style="Normal" xid="1278" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1279" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1280" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1281" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1282" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1283" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1284" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1285" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 12 SCHED_FIFO"</c></p>
+<p style="Normal" xid="1286" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.30</c></p>
+<p style="Normal" xid="1287" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 102.78</c></p>
+<p style="Normal" xid="1288" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 84%</c></p>
+<p style="Normal" xid="1289" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:02.31</c></p>
+<p style="Normal" xid="1290" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1291" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1292" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1293" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1294" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4216</c></p>
+<p style="Normal" xid="1295" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1296" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1297" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 139803</c></p>
+<p style="Normal" xid="1298" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 2726746</c></p>
+<p style="Normal" xid="1299" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 39</c></p>
+<p style="Normal" xid="1300" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1301" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1302" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 8569144</c></p>
+<p style="Normal" xid="1303" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1304" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1305" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1306" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1307" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1308" props="text-align:left; dom-dir:ltr"><c>Copying 102400 bytes in blocks of 1024 from rwinput to rwoutput</c></p>
+<p style="Normal" xid="1309" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1310" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./rw 102400 1024 rwinput rwoutput 12 SCHED_RR"</c></p>
+<p style="Normal" xid="1311" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 0.22</c></p>
+<p style="Normal" xid="1312" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 77.87</c></p>
+<p style="Normal" xid="1313" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 66%</c></p>
+<p style="Normal" xid="1314" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:58.33</c></p>
+<p style="Normal" xid="1315" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1316" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1317" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1318" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1319" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4252</c></p>
+<p style="Normal" xid="1320" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1321" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1322" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 143935</c></p>
+<p style="Normal" xid="1323" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 2775705</c></p>
+<p style="Normal" xid="1324" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 19</c></p>
+<p style="Normal" xid="1325" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1326" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1327" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 7427072</c></p>
+<p style="Normal" xid="1328" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1329" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1330" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1331" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1332" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1333" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1334" props="text-align:left; dom-dir:ltr"><c>using SCHED_OTHER with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1335" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 12 SCHED_OTHER 100000"</c></p>
+<p style="Normal" xid="1336" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 21.32</c></p>
+<p style="Normal" xid="1337" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 36.47</c></p>
+<p style="Normal" xid="1338" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 55%</c></p>
+<p style="Normal" xid="1339" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:44.46</c></p>
+<p style="Normal" xid="1340" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1341" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1342" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1343" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1344" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4200</c></p>
+<p style="Normal" xid="1345" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1346" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1347" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 176623</c></p>
+<p style="Normal" xid="1348" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 1248965</c></p>
+<p style="Normal" xid="1349" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 323636</c></p>
+<p style="Normal" xid="1350" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1351" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1352" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 5203440</c></p>
+<p style="Normal" xid="1353" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1354" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1355" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1356" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1357" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1358" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1359" props="text-align:left; dom-dir:ltr"><c>using SCHED_FIFO with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1360" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 12 SCHED_FIFO 100000"</c></p>
+<p style="Normal" xid="1361" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 31.31</c></p>
+<p style="Normal" xid="1362" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 84.80</c></p>
+<p style="Normal" xid="1363" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 77%</c></p>
+<p style="Normal" xid="1364" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:29.78</c></p>
+<p style="Normal" xid="1365" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1366" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1367" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1368" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1369" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4188</c></p>
+<p style="Normal" xid="1370" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1371" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1372" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 184871</c></p>
+<p style="Normal" xid="1373" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 3172366</c></p>
+<p style="Normal" xid="1374" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 22</c></p>
+<p style="Normal" xid="1375" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1376" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1377" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 9274960</c></p>
+<p style="Normal" xid="1378" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1379" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1380" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1381" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1382" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1383" props="text-align:left; dom-dir:ltr"><c>Running mixed CPU/IO bound process</c></p>
+<p style="Normal" xid="1384" props="text-align:left; dom-dir:ltr"><c>using SCHED_RR with 4096 simultaneous processes...</c></p>
+<p style="Normal" xid="1385" props="text-align:left; dom-dir:ltr"><c>	Command being timed: "sudo ./mixed 102400 1024 rwinput rwoutput 12 SCHED_RR 100000"</c></p>
+<p style="Normal" xid="1386" props="text-align:left; dom-dir:ltr"><c>	User time (seconds): 30.94</c></p>
+<p style="Normal" xid="1387" props="text-align:left; dom-dir:ltr"><c>	System time (seconds): 70.28</c></p>
+<p style="Normal" xid="1388" props="text-align:left; dom-dir:ltr"><c>	Percent of CPU this job got: 62%</c></p>
+<p style="Normal" xid="1389" props="text-align:left; dom-dir:ltr"><c>	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:42.72</c></p>
+<p style="Normal" xid="1390" props="text-align:left; dom-dir:ltr"><c>	Average shared text size (kbytes): 0</c></p>
+<p style="Normal" xid="1391" props="text-align:left; dom-dir:ltr"><c>	Average unshared data size (kbytes): 0</c></p>
+<p style="Normal" xid="1392" props="text-align:left; dom-dir:ltr"><c>	Average stack size (kbytes): 0</c></p>
+<p style="Normal" xid="1393" props="text-align:left; dom-dir:ltr"><c>	Average total size (kbytes): 0</c></p>
+<p style="Normal" xid="1394" props="text-align:left; dom-dir:ltr"><c>	Maximum resident set size (kbytes): 4196</c></p>
+<p style="Normal" xid="1395" props="text-align:left; dom-dir:ltr"><c>	Average resident set size (kbytes): 0</c></p>
+<p style="Normal" xid="1396" props="text-align:left; dom-dir:ltr"><c>	Major (requiring I/O) page faults: 0</c></p>
+<p style="Normal" xid="1397" props="text-align:left; dom-dir:ltr"><c>	Minor (reclaiming a frame) page faults: 180756</c></p>
+<p style="Normal" xid="1398" props="text-align:left; dom-dir:ltr"><c>	Voluntary context switches: 2147220</c></p>
+<p style="Normal" xid="1399" props="text-align:left; dom-dir:ltr"><c>	Involuntary context switches: 49</c></p>
+<p style="Normal" xid="1400" props="text-align:left; dom-dir:ltr"><c>	Swaps: 0</c></p>
+<p style="Normal" xid="1401" props="text-align:left; dom-dir:ltr"><c>	File system inputs: 0</c></p>
+<p style="Normal" xid="1402" props="text-align:left; dom-dir:ltr"><c>	File system outputs: 8176656</c></p>
+<p style="Normal" xid="1403" props="text-align:left; dom-dir:ltr"><c>	Socket messages sent: 0</c></p>
+<p style="Normal" xid="1404" props="text-align:left; dom-dir:ltr"><c>	Socket messages received: 0</c></p>
+<p style="Normal" xid="1405" props="text-align:left; dom-dir:ltr"><c>	Signals delivered: 0</c></p>
+<p style="Normal" xid="1406" props="text-align:left; dom-dir:ltr"><c>	Page size (bytes): 4096</c></p>
+<p style="Normal" xid="1407" props="text-align:left; dom-dir:ltr"><c>	Exit status: 0</c></p>
+<p style="Normal" xid="1408" props="text-align:left; dom-dir:ltr"><c>user@cu-cs-vm:~/Dropbox/3753/PA4/pa3$ </c></p>
+<p style="Normal" xid="1409" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="703" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="21" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="22" props="text-align:left"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</section>
+</abiword>

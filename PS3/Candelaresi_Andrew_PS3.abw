@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="544" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.0" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="0.99.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Tue Oct 27 20:51:38 2015
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">user</m>
+<m key="dc.date">Tue Oct 27 20:51:38 2015
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="4" edit-time="57690" last-saved="1446000698" uid="60a5e042-7b7e-11e5-83c5-c562d1e80c66">
+<version id="2" started="1445828178" uid="abaa89f0-7c03-11e5-83c5-c562d1e80c66" auto="0" top-xid="478"/>
+<version id="4" started="1446000619" uid="cf68ef28-7d1e-11e5-8af1-ebc5e96c06ef" auto="0" top-xid="544"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="Letter" orientation="portrait" width="8.500000" height="11.000000" units="in" page-scale="1.000000"/>
+<section xid="1" props="page-margin-footer:0.5in; page-margin-header:0.5in">
+<p style="Normal" xid="2">Andrew Candelaresi<c></c></p>
+<p style="Normal" xid="3">PS 3<c></c></p>
+<p style="Normal" xid="99"><c></c><c></c></p>
+<p style="Normal" xid="100">1. The state is safe  A safe sequence would be P1,  P0,  P2, P3, P4<c></c></p>
+<p style="Normal" xid="117"><c></c> Available</p>
+<table xid="102">
+<cell xid="103" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="104">1</p>
+</cell>
+<cell xid="106" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="107">1</p>
+</cell>
+<cell xid="109" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="110">2</p>
+</cell>
+<cell xid="112" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="113">1</p>
+</cell>
+</table>
+<p style="Normal" xid="101"><c></c><c></c></p>
+<p style="Normal" xid="189"><c></c>P1 Executes</p>
+<table xid="118" props="table-row-heights:0.2500in/; list-tag:1">
+<cell xid="119" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="120">2</p>
+</cell>
+<cell xid="122" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="123">2</p>
+</cell>
+<cell xid="125" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="126">2</p>
+</cell>
+<cell xid="128" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="129">1</p>
+</cell>
+<cell xid="177" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="178"><c></c><c></c></p>
+</cell>
+<cell xid="180" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="181"><c></c></p>
+</cell>
+<cell xid="183" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="184"><c></c></p>
+</cell>
+<cell xid="186" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="187"><c></c><c></c></p>
+</cell>
+</table>
+<p style="Normal" xid="116"><c></c><c></c></p>
+<p style="Normal" xid="190">P0 Executes<c></c></p>
+<table xid="133" props="table-row-heights:0.2500in/; list-tag:1">
+<cell xid="134" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="135">4</p>
+</cell>
+<cell xid="137" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="138">2</p>
+</cell>
+<cell xid="140" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="141">3</p>
+</cell>
+<cell xid="143" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="144">1</p>
+</cell>
+<cell xid="209" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="210"><c></c><c></c></p>
+</cell>
+<cell xid="212" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="213"><c></c><c></c></p>
+</cell>
+<cell xid="215" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="216"><c></c><c></c></p>
+</cell>
+<cell xid="218" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="219"><c></c><c></c></p>
+</cell>
+</table>
+<p style="Normal" xid="132"><c></c><c></c></p>
+<p style="Normal" xid="191">P2 Executes<c></c></p>
+<table xid="148">
+<cell xid="149" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="150">5</p>
+</cell>
+<cell xid="152" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="153">3</p>
+</cell>
+<cell xid="155" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="156">3</p>
+</cell>
+<cell xid="158" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="159">1</p>
+</cell>
+</table>
+<p style="Normal" xid="147"><c></c><c></c></p>
+<p style="Normal" xid="192">P3 Executes<c></c></p>
+<table xid="163">
+<cell xid="164" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="165">6</p>
+</cell>
+<cell xid="167" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="168">3</p>
+</cell>
+<cell xid="170" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="171">4</p>
+</cell>
+<cell xid="173" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="174">1</p>
+</cell>
+</table>
+<p style="Normal" xid="162"><c></c><c></c></p>
+<p style="Normal" xid="193">P4 Executes <c></c></p>
+<table xid="195">
+<cell xid="196" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="197">6</p>
+</cell>
+<cell xid="199" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="200">4</p>
+</cell>
+<cell xid="202" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="203">4</p>
+</cell>
+<cell xid="205" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="206">2</p>
+</cell>
+</table>
+<p style="Normal" xid="194"><c></c><c></c></p>
+<p style="Normal" xid="221"><c></c><c></c></p>
+<p style="Normal" xid="222">2. <c></c></p>
+<p style="Normal" xid="338">maximum claims<c></c></p>
+<table xid="339">
+<cell xid="340" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="341"><c></c></p>
+</cell>
+<cell xid="343" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="344">R0</p>
+</cell>
+<cell xid="346" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="347">R1</p>
+</cell>
+<cell xid="349" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="350">P1</p>
+</cell>
+<cell xid="352" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="353">2</p>
+</cell>
+<cell xid="355" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="356">1</p>
+</cell>
+<cell xid="358" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="359">P2</p>
+</cell>
+<cell xid="361" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="362">2</p>
+</cell>
+<cell xid="364" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="365">1</p>
+</cell>
+<cell xid="367" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="368">P3</p>
+</cell>
+<cell xid="370" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="371">2</p>
+</cell>
+<cell xid="373" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="374">1</p>
+</cell>
+<cell xid="376" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="377">P4</p>
+</cell>
+<cell xid="379" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="380">2</p>
+</cell>
+<cell xid="382" props="bot-attach:5; left-attach:2; right-attach:3; top-attach:4">
+<p style="Normal" xid="383">1</p>
+</cell>
+<cell xid="385" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="386">P5</p>
+</cell>
+<cell xid="388" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="389">2</p>
+</cell>
+<cell xid="391" props="bot-attach:6; left-attach:2; right-attach:3; top-attach:5">
+<p style="Normal" xid="392">1</p>
+</cell>
+</table>
+<p style="Normal" xid="336"><c></c><c></c></p>
+<p style="Normal" xid="337">current allocation<c></c></p>
+<table xid="280">
+<cell xid="281" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="282"><c></c><c></c></p>
+</cell>
+<cell xid="284" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="285">R0</p>
+</cell>
+<cell xid="287" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="288">R1</p>
+</cell>
+<cell xid="290" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="291">P1</p>
+</cell>
+<cell xid="293" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="294">1</p>
+</cell>
+<cell xid="296" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="297">1</p>
+</cell>
+<cell xid="299" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="300">P2</p>
+</cell>
+<cell xid="302" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="303">1</p>
+</cell>
+<cell xid="305" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="306">0</p>
+</cell>
+<cell xid="308" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="309">P3</p>
+</cell>
+<cell xid="311" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="312">1</p>
+</cell>
+<cell xid="314" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="315">0</p>
+</cell>
+<cell xid="317" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="318">P4</p>
+</cell>
+<cell xid="320" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="321">1</p>
+</cell>
+<cell xid="323" props="bot-attach:5; left-attach:2; right-attach:3; top-attach:4">
+<p style="Normal" xid="324">1</p>
+</cell>
+<cell xid="326" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="327">P5</p>
+</cell>
+<cell xid="329" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="330">1</p>
+</cell>
+<cell xid="332" props="bot-attach:6; left-attach:2; right-attach:3; top-attach:5">
+<p style="Normal" xid="333">0</p>
+</cell>
+</table>
+<p style="Normal" xid="223"><c></c><c></c></p>
+<p style="Normal" xid="395"><c></c><c></c></p>
+<p style="Normal" xid="396">you can not run the bankers algorithm on this since it is in dead lock.  <c></c></p>
+<p style="Normal" xid="397"><c></c><c></c></p>
+<p style="Normal" xid="398">3.<c></c></p>
+<table xid="400">
+<cell xid="401" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="402">P1</p>
+</cell>
+<cell xid="404" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="405">P2</p>
+</cell>
+<cell xid="407" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="408">P3</p>
+</cell>
+<cell xid="410" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="411">P4</p>
+</cell>
+<cell xid="413" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="414">P5</p>
+</cell>
+</table>
+<p style="Normal" xid="399">0		      10                           11                            13                          14                         19<c></c></p>
+<p style="Normal" xid="417"><c></c><c></c></p>
+<table xid="419">
+<cell xid="420" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="421">P2</p>
+</cell>
+<cell xid="423" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="424">P4</p>
+</cell>
+<cell xid="426" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="427">P3</p>
+</cell>
+<cell xid="429" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="430">P5</p>
+</cell>
+<cell xid="432" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="433">P1</p>
+</cell>
+</table>
+<p style="Normal" xid="418">0		      1                             2                              4                             9                          19<c></c></p>
+<p style="Normal" xid="437"><c></c><c></c></p>
+<table xid="439" props="table-row-heights:0.2500in/">
+<cell xid="440" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="441">P2</p>
+</cell>
+<cell xid="443" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="444">P5</p>
+</cell>
+<cell xid="446" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="447">P1</p>
+</cell>
+<cell xid="449" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="450">P3</p>
+</cell>
+<cell xid="452" props="bot-attach:1; left-attach:4; right-attach:5; top-attach:0">
+<p style="Normal" xid="453">P4</p>
+</cell>
+</table>
+<p style="Normal" xid="438">0		      1                             6                             16                            18                       19<c></c></p>
+<p style="Normal" xid="456"><c></c></p>
+<p style="Normal" xid="475">| P1 | P2 | P3 | P4 | P5 | P1 | P3 | P5 | P1 | P5 | P1 | P5 | P1 | P5 | P1 |</p>
+<p style="Normal" xid="476">0     1     2     3     4     5     6     7     8     9    10   11    12   13  14   19 </p>
+<p style="Normal" xid="479"><c></c><c></c></p>
+<p style="Normal" xid="480">SJF has the best turn around time and wait time.</p>
+<p style="Normal" xid="481"><c></c><c></c></p>
+<p style="Normal" xid="482">4.</p>
+<p style="Normal" xid="486" props="text-align:left; dom-dir:ltr">T1	T2	P2	T1</p>
+<p style="Normal" xid="488" props="text-align:left; dom-dir:ltr">Time ---&gt;</p>
+<p style="Normal" xid="489" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="490" props="text-align:left; dom-dir:ltr">Giving time T to task:	T1	T2	T3</p>
+<p style="Normal" xid="491" props="text-align:left; dom-dir:ltr">T1	-2T/3	T/3	T/3</p>
+<p style="Normal" xid="492" props="text-align:left; dom-dir:ltr">T2	-1T/3	-1T/3	2T/3</p>
+<p style="Normal" xid="493" props="text-align:left; dom-dir:ltr">P2</p>
+<p style="Normal" xid="494" props="text-align:left; dom-dir:ltr"><c></c></p>
+<table xid="495">
+<cell xid="496" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="497">Giving time T to task :</p>
+</cell>
+<cell xid="499" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="500">T1</p>
+</cell>
+<cell xid="502" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="503">T2</p>
+</cell>
+<cell xid="505" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
+<p style="Normal" xid="506">T3</p>
+</cell>
+<cell xid="508" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="509">T1</p>
+</cell>
+<cell xid="511" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="512">-2T/3</p>
+</cell>
+<cell xid="514" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="515">T/3</p>
+</cell>
+<cell xid="517" props="bot-attach:2; left-attach:3; right-attach:4; top-attach:1">
+<p style="Normal" xid="518">T/3</p>
+</cell>
+<cell xid="520" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="521">T2</p>
+</cell>
+<cell xid="523" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="524">-1T/3</p>
+</cell>
+<cell xid="526" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="527">-1T/3</p>
+</cell>
+<cell xid="529" props="bot-attach:3; left-attach:3; right-attach:4; top-attach:2">
+<p style="Normal" xid="530">2T/3</p>
+</cell>
+<cell xid="532" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="533">T3</p>
+</cell>
+<cell xid="535" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="536">0</p>
+</cell>
+<cell xid="538" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="539">0</p>
+</cell>
+<cell xid="541" props="bot-attach:4; left-attach:3; right-attach:4; top-attach:3">
+<p style="Normal" xid="542">0</p>
+</cell>
+</table>
+<p style="Normal" xid="487"><c></c></p>
+<p style="Normal" xid="485" props="text-align:left; dom-dir:ltr">At the level of schedulable tasks, the system is fair because each task is shared equally. At the level of processes, the system is not fair since there are shared resources between the processes.</p>
+</section>
+</abiword>

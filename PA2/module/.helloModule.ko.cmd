@@ -1,0 +1,1 @@
+cmd_/home/user/Dropbox/3753/PA2/module/helloModule.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/user/Dropbox/3753/PA2/module/helloModule.ko /home/user/Dropbox/3753/PA2/module/helloModule.o /home/user/Dropbox/3753/PA2/module/helloModule.mod.o

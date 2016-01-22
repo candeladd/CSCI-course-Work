@@ -1,0 +1,267 @@
+/*
+ * File: multi-lookup.c
+ * Author: Andrew Candelaresi
+ * Project: CSCI 3753 Programming Assignment 3
+ 
+ * Modify Date: 2015/8/10
+ * Description:
+ * 	This file contains the reference threaded
+ *      solution to this assignment.
+ *  
+ */
+#include <pthread.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+
+#include "util.h"
+#include "queue.h"
+#include "multi-lookup.h"
+
+pthread_mutex_t* q_lock;
+pthread_mutex_t* out_lock;
+
+queue Qbuf;
+int current_requester = 0;
+int resolver_block = 0;
+
+int main(int argc, char* argv[]){
+
+    
+    
+    /* Check Arguments */
+    
+    if(argc < MINARGS)
+    {
+		fprintf(stderr, "Not enough arguments: %d\n", (argc - 1));
+		fprintf(stderr, "Usage:\n %s %s\n", argv[0], USAGE);
+		return EXIT_FAILURE;
+    }
+    
+    /* Local Vars */
+    FILE* outputfp = NULL;
+   
+    
+    int num_requesters = argc-2;
+    int num_resolvers = sysconf(_SC_NPROCESSORS_ONLN);
+    int rc;
+    int i;
+    
+    /* check numbers of resolvers*/
+	if (num_resolvers < MIN_RESOVER_THREADS)
+	{
+		num_resolvers = MIN_RESOVER_THREADS;
+	} 
+	
+	/*make arrays of pthreads*/
+  	pthread_t requesters[num_requesters];
+  	pthread_t resolvers[num_resolvers];
+
+    /* Open Output File */
+    outputfp = fopen(argv[(argc-1)], "w");
+    if(!outputfp){
+		fprintf(stderr, "Error Opening Output File \n");
+		return EXIT_FAILURE;
+    }
+    
+    /* initialize that dirty Q*/
+	if (Queue_init(&Qbuf, SBUFSIZE == QUEUE_FAILURE)){
+		fprintf(stderr, "Error opening output file /n");
+		return EXIT_FAILURE; 
+	} 
+    
+    /* create mutex */
+    if (pthread_mutex_init(&q_lock, NULL )){
+		fprintf(stderr, "I was trying to make a q mutex and it did not work");
+		EXIT_FAILURE;
+    }
+    
+    if (pthread_mutex_init(&out_lock, NULL )){
+		fprintf(stderr, "I was trying to make the out mutex and it did not work");
+		EXIT_FAILURE;
+    }
+    
+    /* Spawn Request threads */
+    for(i=0; i< num_requesters; i++)
+    {
+		printf("In main: creating requester thread %d\n", i);
+		rc = pthread_create(&requesters[i], NULL, readInput, argv[i+1]);
+		if (rc)
+		{
+			printf("ERROR; return code from pthread_create() is %d\n", rc);
+			exit(EXIT_FAILURE);
+		}
+    }
+    
+    /* spawn resolver threads*/
+    for(i=0; i <num_resolvers; i++)
+    {
+		printf("In main: creating resolver %d\n", i);
+		rc = pthread_create(&(resolvers[i]), NULL, getFromBuff, (void*)outputfp);
+		if (rc)
+		{
+			printf("ERROR; return code from pthread_create() is %d\n", rc);
+			exit(EXIT_FAILURE);
+		}
+    }
+    
+    /* Wait for All Theads to Finish */
+    for(i=0;i<num_requesters;i++)
+    {
+		pthread_join(requesters[i],NULL);
+    }
+    
+    for(i = 0; i < num_resolvers; i ++)
+    {
+		pthread_join(resolvers[i], NULL);
+	}
+	
+	if(fclose(outputfp)) 
+	{
+		fprintf(stderr, "Error closing output file \n");
+	}
+    printf("All of the threads were completed!\n");
+    
+    /*clean it up dawg*/
+    queue_cleanup(&Qbuf);
+    
+    /* cleanup mutex */ 
+   if (pthread_mutex_destroy(&q_lock)) 
+   {
+	   fprintf(stderr, "destroying buf mutex failed \n");
+   }
+   if (pthread_mutex_destroy(&out_lock)) 
+   {
+	   fprintf(stderr, "destroying out mutex failed \n");
+   }
+	return EXIT_SUCCESS;
+}
+
+void* readInput(void* input)
+{ 
+	FILE* inputfp;
+	
+	char* payload;
+	char hostname[SBUFSIZE];
+	
+	/* Open Input File */
+	inputfp = fopen((char*)input, "r");
+	
+	if(!inputfp)
+	{
+		fprintf(stderr, "Error Opening file \n");
+		return NULL;
+	}
+	
+	while(fscanf(inputfp, INPUTFS, hostname) > 0)
+	{
+		pthread_mutex_lock(&q_lock);
+		while(queue_is_full(&Qbuf))
+		{
+			pthread_mutex_unlock(&q_lock);
+			if(usleep(rand() % 100)) 
+			{
+				fprintf(stderr, "Error thread sleeping \n");
+			}
+			pthread_mutex_lock(&q_lock);
+		}
+		
+		if (!queue_is_full(&Qbuf))
+		{
+			current_requester++;
+			if(current_requester >= 1)
+			{
+				resolver_block = 1;
+			}
+			payload = malloc(sizeof(hostname));
+			strcpy(payload, hostname);
+				
+			if(queue_push(&Qbuf, (void*) payload)==QUEUE_FAILURE)
+			{
+				fprintf(stderr, "Error push failed \n");
+			}
+			
+			else
+			{
+				fprintf(stderr, "Error accessing thread \n"); 
+			}
+		
+			current_requester--;
+			if (current_requester == 0)
+			{
+				resolver_block == 0;
+			}
+	
+		}
+		pthread_mutex_unlock(&q_lock);
+	}				
+	/* Close Input File */
+	fclose(inputfp);
+}
+
+
+
+void* getFromBuff(void* input)
+{
+	FILE* outputfp;
+		
+	char* hostname;
+		
+	node_t* headptr;
+	node_t* temp;
+		
+	pthread_mutex_lock(&q_lock);
+	while(resolver_block || !queue_is_empty(&Qbuf)) 
+	{
+		if((hosname = (char*)queue_pop(&Qbuf)) == NULL) 
+		{
+			fprintf(stderr, "there is nothing to pop")
+		}
+		pthread_mutex_unlock(q_lock);
+			
+		headptr = malloc(sizeof(node_t));
+		headptr->next=NULL;
+			
+		/* Lookup hostname and get all IP string */
+		if(exttended_dnslookup(hostname, headptr, INET6_ADDRSTRLEN) ==UTIL_FAILURE) 
+		{
+			fprintf(stderr, "dnslookup error: %s\n", hostname);
+		}
+			
+		pthread_mutex_lock(out_lock);
+		fprintf(outputfp, "%s", hostname);
+			 
+		/* handle printing edge cases */
+		if (headptr->next == NULL) 
+		{
+			 fprintf(outputfp, ",");
+		}
+		else
+		{
+			 int j = 0;
+			 while (headptr->next != NULL)
+			 {
+				if (j % 3 == 0){
+					 fprintf(outputfp, ",%s", headptr->data);
+				j++;
+				temp = headptr;
+				headptr = headptr->next;
+				free(temp);
+			}
+		}
+		fprintf(outputfp, "\n");
+		pthread_mutex_unlock(&out_lock);
+			
+		/* get rid of it*/
+		free(headptr);
+		free(hostname);
+			
+		pthread_mutex_lock(&q_lock);
+	}
+	pthread_mutex_unlock(&q_lock);
+
+    return NULL;		
+}
+
